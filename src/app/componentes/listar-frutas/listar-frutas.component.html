@@ -1,0 +1,26 @@
+<div class="custom-form" >
+<form>
+<h1>Listar Frutas</h1>
+<ng-container  *ngIf="frutas">
+    <table >
+        <thead>
+            <tr >
+                <th>Id</th>
+                <th>Clave</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let fru of frutas">
+                <td >{{ fru.id }}</td>
+                <td>{{ fru.clave }}</td>
+                <td>{{ fru.nombre }}</td>
+                <td>{{ fru.precio }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</ng-container>
+</form>
+</div>

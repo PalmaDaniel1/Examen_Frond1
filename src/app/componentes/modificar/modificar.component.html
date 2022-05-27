@@ -1,0 +1,58 @@
+<p>modificar works!</p>
+<div class="modificar">
+    <form class="custom-form" method="post">
+      <h1>Modificar Fruta</h1>
+      <input
+        type="id"
+        [(ngModel)]="id"
+        name="id"
+        placeholder="Id"
+        required="required"
+      />
+      <input
+        type="clave"
+        [(ngModel)]="clave"
+        name="clave"
+        placeholder="Clave"
+        required="required"
+      />
+      <input
+        type="nombre"
+        [(ngModel)]="nombre"
+        name="nombre"
+        placeholder="Nombre de la Fruta"
+        required="required"
+      />
+      <input
+        type="precio"
+        [(ngModel)]="precio"
+        name="precio"
+        placeholder="Precio"
+        required="required"
+      />
+      <button type="submit" (click)="Actualizar()">Modificar</button>
+    </form>
+    <form>
+  <ng-container *ngIf="frutas">
+      <table class="custom-form" >
+          <thead>
+              <tr>
+                  <th>Id</th>
+                  <th>Clave</th>
+                  <th>Nombre</th>
+                  <th>Precio</th>
+              </tr>
+          </thead>
+          <tbody >
+              <tr >
+                  <td>{{ frutas.id }}</td>
+                  <td>{{ frutas.clave }}</td>
+                  <td>{{ frutas.nombre }}</td>
+                  <td>{{ frutas.precio }}</td>
+              </tr>
+          </tbody>
+      </table>
+  
+  </ng-container>
+  </form>
+</div>

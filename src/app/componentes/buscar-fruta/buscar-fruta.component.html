@@ -1,0 +1,36 @@
+<div class="buscar">
+    <form class="custom-form" method="post">
+      <h1>Buscar Fruta</h1>
+      <input
+        type="buscar"
+        [(ngModel)]="clave"
+        name="clave"
+        placeholder="Buscar por Clave"
+        required="required"
+      />
+      <button type="submit" (click)="buscar()">Buscasr</button>
+    </form>
+    <form>
+  <ng-container *ngIf="frutas">
+      <table class="custom-form" >
+          <thead>
+              <tr>
+                  <th>Id</th>
+                  <th>Clave</th>
+                  <th>Nombre</th>
+                  <th>Precio</th>
+              </tr>
+          </thead>
+          <tbody >
+              <tr >
+                  <td>{{ frutas.id }}</td>
+                  <td>{{ frutas.clave }}</td>
+                  <td>{{ frutas.nombre }}</td>
+                  <td>{{ frutas.precio }}</td>
+              </tr>
+          </tbody>
+      </table>
+  
+  </ng-container>
+  </form>
+</div>

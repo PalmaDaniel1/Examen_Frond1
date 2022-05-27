@@ -1,0 +1,24 @@
+<div fxFlex fxLayout="row" fxLayoutAlign="flex-end" >
+    <ul fxLayout="row" fxLayoutGap="10px" >
+        <button mat-raised-button routerLinkActive="list-item-activate" routerLink="/" >Inicio</button>
+
+
+
+
+
+        <button mat-raised-button routerLinkActive="list-item-activate" routerLink="/buscar_fruta" >Buscar Fruta</button>
+
+
+
+        <button mat-raised-button routerLinkActive="list-item-activate" routerLink="/modificar_fruta" >Modificar Fruta</button>
+
+
+
+        
+        <button mat-raised-button (click)="leerFichero()" >Leer Fichero</button>
+
+        <button mat-raised-button routerLinkActive="list-item-activate" routerLink="/listar_frutas" >Listar Frutas</button>
+    </ul>
+    
+</div>
+
